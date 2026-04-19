@@ -24,7 +24,9 @@ jobs:
             registry-url: 'https://npm.pkg.github.com'
 
         - name: Install node dependencies
-          run: npm install
+          run: |
+            npm cache clean --force
+            npm install
         
         - name: Publish it
           run: npm publish
