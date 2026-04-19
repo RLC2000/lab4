@@ -25,3 +25,7 @@ jobs:
 
         - name: Install node dependencies
           run: npm install
+        
+        - name: Publish it
+          run: npm publish
+          
