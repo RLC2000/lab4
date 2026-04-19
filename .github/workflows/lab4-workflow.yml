@@ -22,11 +22,12 @@ jobs:
           with:
             node-version: '20.x'
             registry-url: 'https://npm.pkg.github.com'
+            scope: rlc2000
 
         - name: Install node dependencies
           run: |
             npm cache clean --force
-            npm install
+            npm ci
         
         - name: Publish it
           run: npm publish
